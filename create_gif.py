@@ -1,0 +1,11 @@
+# Creating a Gif with Python!
+
+import imageio.v3 as iio
+
+filenames = ['sunset 1.jpg', 'sunset 2.jpg']
+images = []
+
+for filename in filenames:
+    images.append(iio.imread(filename))
+
+iio.imwrite('sunset.gif', images, duration = 500, loop = 0)
